@@ -6,6 +6,7 @@ from .custom.conditions import is_upper_case
 from .custom.services import final_service
 
 
+# todo: change this script to yours
 SCRIPT = {
     "technical_flow": {
         "start_node": {
@@ -36,6 +37,7 @@ SCRIPT = {
     }
 }
 
+# todo: set pipeline parameters
 START_NODE = ("technical_flow", "start_node")
 FALLBACK_NODE = ("technical_flow", "fallback")
 
