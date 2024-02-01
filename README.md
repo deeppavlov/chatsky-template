@@ -11,6 +11,10 @@ git clone https://github.com/deeppavlov/DFF-template.git
 cd DFF-template
 ```
 
+Alternatively, you can create a new repository using this one as a template via GitHub:
+
+https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
+
 ### Edit project files
 
 [0.] Install dependencies with
