@@ -6,7 +6,7 @@ This repository is a template for DFF projects.
 
 ### Clone the repo:
 
-```commandline
+```shell
 git clone https://github.com/deeppavlov/DFF-template.git
 cd DFF-template
 ```
@@ -18,7 +18,7 @@ https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
 ### Edit project files
 
 [0.] Install dependencies with
-   ```commandline
+   ```shell
    pip install -r requirements.txt
    ```
 1. Write your custom functions (e.g. custom responses, custom services) into `bot/custom`.
@@ -29,12 +29,12 @@ https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
 
 #### With Python
 
-```commandline
+```shell
 pytest test.py
 ```
 #### With Docker
 
-```commandline
+```shell
 docker build --target test .
 ```
 
@@ -42,12 +42,12 @@ docker build --target test .
 
 #### With Python
 
-```commandline
+```shell
 DB_URI="sqlite+aiosqlite:////$(pwd)/sqlite.db" TG_BOT_TOKEN_FILE="secrets/tg_token.txt" python app.py
 ```
 
 #### With Docker
 
-```commandline
+```shell
 docker compose up
 ```
