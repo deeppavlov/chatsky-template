@@ -1,0 +1,21 @@
+services:
+  bot:
+    build:
+      context: services/bot
+      target:
+        development
+    volumes:
+      - db-data:/etc/data
+    environment:
+      DB_URI: "sqlite+aiosqlite://///etc/data/sqlite.db"
+      TG_BOT_TOKEN_FILE: /run/secrets/tg_bot_token
+      PYTHONUNBUFFERED: 1
+    secrets:
+      - tg_bot_token
+
+secrets:
+  tg_bot_token:
+    file: secrets/tg_token.txt
+
+volumes:
+  db-data:
