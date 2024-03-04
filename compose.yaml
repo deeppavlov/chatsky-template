@@ -9,6 +9,7 @@ services:
     environment:
       DB_URI: "sqlite+aiosqlite://///etc/sqlite.db"
       TG_BOT_TOKEN_FILE: /run/secrets/tg_bot_token
+      PYTHONUNBUFFERED: 1
     secrets:
       - tg_bot_token
 

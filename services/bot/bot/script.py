@@ -3,7 +3,7 @@ from dff.script import RESPONSE, TRANSITIONS, LOCAL
 from dff.script.conditions import exact_match, true
 
 from .custom.conditions import is_upper_case
-from .custom.services import final_service
+from .custom.services import pre_service, post_service
 
 
 # todo: change this script to yours
@@ -41,5 +41,5 @@ SCRIPT = {
 START_NODE = ("technical_flow", "start_node")
 FALLBACK_NODE = ("technical_flow", "fallback")
 
-PRE_SERVICES = [final_service]
-POST_SERVICES = []
+PRE_SERVICES = [pre_service]
+POST_SERVICES = [post_service]
