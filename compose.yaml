@@ -7,7 +7,7 @@ services:
     volumes:
       - db-data:/etc/data
     environment:
-      DB_URI: "sqlite+aiosqlite://///etc/sqlite.db"
+      DB_URI: "sqlite+aiosqlite://///etc/data/sqlite.db"
       TG_BOT_TOKEN_FILE: /run/secrets/tg_bot_token
       PYTHONUNBUFFERED: 1
     secrets:
