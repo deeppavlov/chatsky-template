@@ -11,11 +11,11 @@ SCRIPT = {
     "technical_flow": {
         "start_node": {
             TRANSITIONS: {
-                ("main_flow", "greeting_node"): exact_match(Message(text="/start")),
+                ("main_flow", "greeting_node"): exact_match(Message("/start")),
             },
         },
         "fallback": {
-            RESPONSE: Message(text="Error."),
+            RESPONSE: Message("Error."),
         },
     },
     "main_flow": {
@@ -26,13 +26,13 @@ SCRIPT = {
             },
         },
         "greeting_node": {
-            RESPONSE: Message(text="Hi, please say something."),
+            RESPONSE: Message("Hi, please say something."),
         },
         "upper": {
-            RESPONSE: Message(text="Don't scream, please."),
+            RESPONSE: Message("Don't scream, please."),
         },
         "response": {
-            RESPONSE: Message(text="Thank you."),
+            RESPONSE: Message("Thank you."),
         },
     }
 }

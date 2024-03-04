@@ -1,2 +1,2 @@
-dff[telegram,sqlite]==0.6.4
+dff[telegram,sqlite]~=0.7
 pytest
