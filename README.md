@@ -43,7 +43,7 @@ docker build --target test services/bot
 #### With Python
 
 ```shell
-(export DB_URI="sqlite+aiosqlite:////$(pwd)/sqlite.db" TG_BOT_TOKEN_FILE="secrets/tg_token.txt" && cd services/bot && python app.py)
+(export DB_URI="sqlite+aiosqlite:////$(pwd)/sqlite.db" TG_BOT_TOKEN_FILE="$(pwd)/secrets/tg_token.txt" && cd services/bot && python app.py)
 ```
 
 #### With Docker Compose
