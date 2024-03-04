@@ -5,7 +5,7 @@ from dff.utils.testing import check_happy_path
 from dff.script import Message
 import pytest
 
-from bot.pipeline import pipeline
+from .bot.pipeline import pipeline
 
 
 TEST_DATA_FILE = Path(__file__).parent / "test_data.json"

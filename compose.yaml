@@ -1,6 +1,7 @@
 services:
-  dff:
+  bot:
     build:
+      context: services/bot
       target:
         development
     volumes:
