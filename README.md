@@ -19,8 +19,7 @@ https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
 
 [0.] Install dependencies with
    ```shell
-   cd services/bot
-   pip install -r requirements.txt
+   (cd services/bot && pip install -r requirements.txt)
    ```
 1. Write your custom functions (e.g. custom responses, custom services) into `bot/custom`.
 2. Edit DFF script at `bot/script.py`.
@@ -31,8 +30,7 @@ https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
 #### With Python
 
 ```shell
-cd services/bot
-pytest test.py
+(cd services/bot && pytest test.py)
 ```
 #### With Docker
 
@@ -45,8 +43,7 @@ docker build --target test services/bot
 #### With Python
 
 ```shell
-cd services/bot
-DB_URI="sqlite+aiosqlite:////$(pwd)/sqlite.db" TG_BOT_TOKEN_FILE="secrets/tg_token.txt" python app.py
+(export DB_URI="sqlite+aiosqlite:////$(pwd)/sqlite.db" TG_BOT_TOKEN_FILE="secrets/tg_token.txt" && cd services/bot && python app.py)
 ```
 
 #### With Docker Compose
