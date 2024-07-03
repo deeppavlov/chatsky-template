@@ -1,19 +1,19 @@
-# DFF Project Template
+# Chatsky Project Template
 
-This repository is a template for DFF projects.
+This repository is a template for Chatsky projects.
 
 ## How to use it
 
 ### Clone the repo:
 
 ```shell
-git clone https://github.com/deeppavlov/DFF-template.git
-cd DFF-template
+git clone https://github.com/deeppavlov/chatsky-template.git
+cd chatsky-template
 ```
 
 Alternatively, you can create a new repository using this one as a template via GitHub:
 
-https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
+https://github.com/new?template_name=chatsky-template&template_owner=deeppavlov
 
 ### Edit project files
 
@@ -22,7 +22,7 @@ https://github.com/new?template_name=DFF-template&template_owner=deeppavlov
    (cd services/bot && pip install -r requirements.txt)
    ```
 1. Write your custom functions (e.g. custom responses, custom services) into `bot/custom`.
-2. Edit DFF script at `bot/script.py`.
+2. Edit Chatsky script at `bot/script.py`.
 3. Save Telegram bot token into `secrets/tg_token.txt`. (currently this template only supports telegram bots)
 
 ### Test the bot
