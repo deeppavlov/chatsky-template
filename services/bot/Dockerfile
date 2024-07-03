@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM python as base
 
-WORKDIR /dff_pipeline
+WORKDIR /chatsky_pipeline
 
 COPY requirements.txt requirements.txt
 RUN ["python", "-m", "pip", "install", "-r", "requirements.txt"]
