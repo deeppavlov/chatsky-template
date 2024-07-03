@@ -11,7 +11,7 @@ SCRIPT = {
     "technical_flow": {
         "start_node": {
             TRANSITIONS: {
-                ("main_flow", "greeting_node"): exact_match(Message("/start")),
+                ("main_flow", "greeting_node"): exact_match("/start"),
             },
         },
         "fallback": {

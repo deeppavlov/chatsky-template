@@ -2,7 +2,7 @@ import os
 
 from chatsky.pipeline import Pipeline
 from chatsky.context_storages import context_storage_factory
-from chatsky.messengers.telegram import PollingTelegramInterface
+from chatsky.messengers.telegram import LongpollingInterface
 
 from . import script
 
@@ -24,7 +24,7 @@ TG_BOT_TOKEN = get_variable("TG_BOT_TOKEN")
 messenger_interface = None
 
 if TG_BOT_TOKEN is not None:
-    messenger_interface = PollingTelegramInterface(token=TG_BOT_TOKEN)
+    messenger_interface = LongpollingInterface(token=TG_BOT_TOKEN)
 
 
 pipeline = Pipeline.from_script(

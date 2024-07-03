@@ -2,7 +2,6 @@ from json import load
 from pathlib import Path
 
 from chatsky.utils.testing import check_happy_path
-from chatsky.script import Message
 import pytest
 
 from .bot.pipeline import pipeline
@@ -22,4 +21,4 @@ assert len(TEST_CASES) == 3
     "happy_path", TEST_CASES
 )
 def test_happy_paths(happy_path: str):
-    check_happy_path(pipeline, tuple(map(lambda l: (Message(text=l[0]), Message(text=l[1])), TEST_DATA[happy_path])))
+    check_happy_path(pipeline, TEST_DATA[happy_path])
