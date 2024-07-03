@@ -1,8 +1,8 @@
 from json import load
 from pathlib import Path
 
-from dff.utils.testing import check_happy_path
-from dff.script import Message
+from chatsky.utils.testing import check_happy_path
+from chatsky.script import Message
 import pytest
 
 from .bot.pipeline import pipeline

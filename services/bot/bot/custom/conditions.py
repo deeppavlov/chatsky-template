@@ -1,4 +1,4 @@
-from dff.script import Context
+from chatsky.script import Context
 
 
 def is_upper_case(ctx: Context, pipeline):

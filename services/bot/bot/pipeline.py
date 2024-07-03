@@ -1,8 +1,8 @@
 import os
 
-from dff.pipeline import Pipeline
-from dff.context_storages import context_storage_factory
-from dff.messengers.telegram import PollingTelegramInterface
+from chatsky.pipeline import Pipeline
+from chatsky.context_storages import context_storage_factory
+from chatsky.messengers.telegram import PollingTelegramInterface
 
 from . import script
 

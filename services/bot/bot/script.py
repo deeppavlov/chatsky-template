@@ -1,6 +1,6 @@
-from dff.script import Message
-from dff.script import RESPONSE, TRANSITIONS, LOCAL
-from dff.script.conditions import exact_match, true
+from chatsky.script import Message
+from chatsky.script import RESPONSE, TRANSITIONS, LOCAL
+from chatsky.script.conditions import exact_match, true
 
 from .custom.conditions import is_upper_case
 from .custom.services import pre_service, post_service
