@@ -1,2 +1,2 @@
-chatsky[telegram,sqlite]~=0.8
+chatsky[telegram,sqlite]~=0.9
 pytest

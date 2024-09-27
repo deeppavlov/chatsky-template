@@ -1,6 +1,6 @@
 import os
 
-from chatsky.pipeline import Pipeline
+from chatsky import Pipeline
 from chatsky.context_storages import context_storage_factory
 from chatsky.messengers.telegram import LongpollingInterface
 
@@ -27,12 +27,12 @@ if TG_BOT_TOKEN is not None:
     messenger_interface = LongpollingInterface(token=TG_BOT_TOKEN)
 
 
-pipeline = Pipeline.from_script(
-    getattr(script, "SCRIPT"),
-    start_label=getattr(script, "START_NODE"),
-    fallback_label=getattr(script, "FALLBACK_NODE", None),
-    pre_services=getattr(script, "PRE_SERVICES", []),
-    post_services=getattr(script, "POST_SERVICES", []),
+pipeline = Pipeline(
+    script=script.SCRIPT,
+    start_label=script.START_NODE,
+    fallback_label=script.FALLBACK_NODE,
+    pre_services=script.PRE_SERVICES,
+    post_services=script.POST_SERVICES,
     context_storage=context_storage_factory(DB_URI) if DB_URI else None,
     messenger_interface=messenger_interface,
 )

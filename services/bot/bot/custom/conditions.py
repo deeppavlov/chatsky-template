@@ -1,5 +1,6 @@
-from chatsky.script import Context
+from chatsky import Context, BaseCondition
 
 
-def is_upper_case(ctx: Context, pipeline):
-    return ctx.last_request.text.isupper()
+class IsUpperCase(BaseCondition):
+    async def call(self, ctx: Context) -> bool:
+        return ctx.last_request.text.isupper()
