@@ -1,8 +1,7 @@
-from chatsky.script import Message
-from chatsky.script import RESPONSE, TRANSITIONS, LOCAL
-from chatsky.script.conditions import exact_match, true
+from chatsky import Message, RESPONSE, TRANSITIONS, LOCAL, Transition as Tr
+import chatsky.conditions as cnd
 
-from .custom.conditions import is_upper_case
+from .custom.conditions import IsUpperCase
 from .custom.services import pre_service, post_service
 
 
@@ -10,29 +9,37 @@ from .custom.services import pre_service, post_service
 SCRIPT = {
     "technical_flow": {
         "start_node": {
-            TRANSITIONS: {
-                ("main_flow", "greeting_node"): exact_match("/start"),
-            },
+            TRANSITIONS: [
+                Tr(
+                    dst=("main_flow", "greeting_node"),
+                    cnd=cnd.ExactMatch("/start")
+                )
+            ],
         },
         "fallback": {
-            RESPONSE: Message("Error."),
+            RESPONSE: "Error.",
         },
     },
     "main_flow": {
         LOCAL: {
-            TRANSITIONS: {
-                "upper": is_upper_case,
-                "response": true(),
-            },
+            TRANSITIONS: [
+                Tr(
+                    dst="upper",
+                    cnd=IsUpperCase()
+                ),
+                Tr(
+                    dst="response",
+                )
+            ]
         },
         "greeting_node": {
-            RESPONSE: Message("Hi, please say something."),
+            RESPONSE: "Hi, please say something.",
         },
         "upper": {
-            RESPONSE: Message("Don't scream, please."),
+            RESPONSE: "Don't scream, please.",
         },
         "response": {
-            RESPONSE: Message("Thank you."),
+            RESPONSE: "Thank you.",
         },
     }
 }
